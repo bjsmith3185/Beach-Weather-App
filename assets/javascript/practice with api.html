@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    <title>Search Weather by City</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="assets/css/style_city_search.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+        <button type="button" value="button" class="btn btn-primary city-search" id="submit">Search Bro!</button>
+<ul class="five-day-forecast" id="five-day-forecast">
+        <!-- <li class="result" id="day1"></li>
+        <li class="result" id="day2"></li>
+        <li class="result" id="day3"></li>
+        <li class="result" id="day4"></li>
+        <li class="result" id="day5"></li>
+        <li class="result" id="sunrise"></li>
+        <li class="result" id="sunset"></li> -->
+</ul>
+
+<div class="each-day"></div>
+
+
+
+<script>
+
+var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=charlotte&units=imperial&appid=7a966b580102119ddbcfa34b8cdafb5b";
+
+//$("button").click(function(){
+$.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+        
+var counter = 0;
+for (var i=0;i <response.list.length; i++) {
+   // console.log(response.list.length);
+    var last2 = (response.list[i].dt_txt).substring(11,13);
+  // console.log(last2);
+    if ( last2 === "06") {
+      //  console.log(response.list[i].dt_txt);
+        var lowTemp = response.list[i].main.temp_min;
+        console.log("low temp " + lowTemp);
+        counter++;
+        console.log("this is the count " + counter);
+    }
+
+    if ( last2 === "15") {
+       // console.log(response.list[i].dt_txt);
+        var hiTemp = response.list[i].main.temp_max;
+        console.log("hi temp " + hiTemp);
+        var date = (response.list[i].dt_txt).substring(5,11);
+        console.log(date);
+        var humidity = response.list[i].main.humidity;
+        console.log(humidity);
+        var description = response.list[i].weather[0].description;
+        console.log(description);
+        //$("#five-day-forecast").append("<li> This is the high temp " + hiTemp + " degrees </li>");
+    
+        //$("#five-day-forecast").append("<div class='each-day'>" + date + " " + " Low Temp: " + lowTemp + " High Temp: " + hiTemp + " Condition: " + description + "</div>");
+        $(".each-day").append("<div id='day-"+counter+"'>Date: <span>" + date + "</span> Condition: <span>" + description + "</span></div>");
+        $(".each-day").append("<div id='temp-"+counter+"'>High: <span>" + hiTemp + "</span> Low: <span>" + lowTemp + "</span></div>");
+        $(".each-day").append("<div id=humidity-"+counter+"'>Humidity: <span>" + humidity + "% </span></div><br>");
+
+
+}
+//<div id="day-i">date:<span>date</span>Condition:<span>condition</span></div>
+
+       
+
+
+
+
+ }
+});
+
+// append html showing the date/weather icon and the high low for each pass thru the loop
+
+    
+
+// function changeTime(pass) {   
+//     var a = new Date(+pass * 1000);
+//     var hour = a.getHours();
+//     var min = a.getMinutes();
+//     var time = hour + ":" + min;
+//     return time;
+//     console.log(time);
+//     };
+
+//    var newTime = changeTime(1526493600);
+// console.log(newTime);
+
+
+
+
+</script>
+
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="assets/javascript/js_city-search.js"></script> -->
+
+</body>
+</html>
+

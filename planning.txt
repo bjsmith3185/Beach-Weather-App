@@ -97,3 +97,11 @@ create html for dom
 populate the new dom
 
 reset button?
+
+
+
+layout for 5 day forcast
+
+date, description;
+high, low;
+humidity 

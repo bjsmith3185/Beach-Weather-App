@@ -8,7 +8,7 @@
    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style_city_search.css">
+    <link rel="stylesheet" href="assets/css/style_five_day.css">
 </head>
 
 <body>
@@ -52,54 +52,16 @@
 
 <div class="container">
     <div class="jumbotron text-center" id="jumbo">
-        <h1>Instant Weather Report</h1>
-        <p>Enter the city you would like current weather deatils for,</p>
+        <h1>Get the latest 5 day weather forecast!</h1>
+        <p>Enter your city of interest below.</p>
 
         <form class="form-inline text-center">
             <input type="text" class="form-control" id="input" onfocus="this.value=''" value="Search city..">
             <br>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="currentConditionID" checked value="">Current Conditions
-            </div>
-              <br>
-            <!-- <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="todaysForcast" checked value="">Today's Forcast
-            </div>
-            <br> -->
-            <!-- <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="tomorrowsForcast" checked value="">Tomorrow's Forcast
-            </div>
-            <br> -->
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="currentTemperatureID" checked="checked" value="">Current Temperature
-            </div>
-            <br>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="humidityID" checked="checked" value="">Humidity
-            </div>
-            <br>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="windID" checked="checked" value="">Wind Speed
-            </div>
-            <br>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="sunRiseID" checked="checked" value="">Sun Rise
-            </div>
-            <br>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" id="sunSetID" checked="checked" value="">Sun Set
-            </div>
+            
             <br>
 
-            <button type="button" value="button" class="btn btn-primary city-search" id="submit"><span class="glyphicon glyphicon-search"></span> Search Bro!</button>
+            <button type="button" value="button" class="btn btn-primary city-search" id="submit"><span class="glyphicon glyphicon-search"></span> Get 5 day bro!</button>
         </form>
     </div>
 </div>
@@ -115,16 +77,8 @@
                     <div class="panel-heading" id="panel-heading">
                     <h3 class="panel-title text-center" id="city" >Results for:</h3>
                     </div>
-                    <div class="panel-body" id="results-body">
-                        <ul>
-                            <li class="result" id="display"></li>
-                            <li class="result" id="current"></li>
-                            <li class="result" id="temp"></li>
-                            <li class="result" id="humidity"></li>
-                            <li class="result" id="wind"></li>
-                            <li class="result" id="sunrise"></li>
-                            <li class="result" id="sunset"></li>
-                        </ul>
+                    <div class="each-day" id="results-body">
+                        <!-- this is where the 5 day forecast will be appended -->
                     </div>
                 </div>
             </div>
@@ -143,7 +97,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="assets/javascript/js_city-search.js"></script>
+<script type="text/javascript" src="assets/javascript/js_five_day_forcast.js"></script>
 
 </body>
 </html>
+

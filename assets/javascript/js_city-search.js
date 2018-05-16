@@ -120,21 +120,14 @@ $(document).ready(function(){
    
   });
    
-    
-   
- 
-
-  
-     
-   
-
-   
-
 }); // end of document.ready
 
 
+// weather forcast for 5 days outlook
 
 
+
+        
 
 
 
