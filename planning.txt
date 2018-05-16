@@ -1,0 +1,99 @@
+
+pages;
+    home
+        - navbar with link to each page
+        - background image, animated waves
+    weather search any city
+        - input text for city
+        - input start date
+        - input end date
+        - check boxes
+            - current conditions
+            - todays forcast
+            - tomorrows forcast
+            - air temp
+            - humidity
+            - sun rise
+            - sun set
+            - display image for current conditions
+    beach weather
+        - select from city list
+        - check boxes
+            - current conditions
+            - todays forcast
+            - tomorrows forcast
+            - air temp
+            - water temp
+            - humidity
+            - wind speeed
+            - tides
+    fishing forcast
+        - sekect from city list
+        - check boxes
+            - current conditions
+            - todays forcast
+            - tomorrows forcast
+            - air temp
+            - water temp
+            - humidity
+            - wind speeed
+            - tides
+        - random select fish pic
+    radar
+        - enter city
+        - display current weather radar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+buttons needed;
+- clickable links for city (3)
+- submit button (1)
+- reset button (1)
+
+check boxes needed;
+- air temp
+- water temp
+- wind speeed
+- humidity
+- todays date
+
+input boxes needed;
+- start date
+- end date
+
+
+
+
+
+user clicks on link for the city they choose
+user uses check boxes to select the properties
+user enteres start date
+user enters end date
+(user can check box today's date)
+user presses submit
+
+compile queryurl
+return json
+
+set variables to json data
+
+create html for dom
+populate the new dom
+
+reset button?

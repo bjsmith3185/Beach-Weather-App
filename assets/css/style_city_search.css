@@ -1,0 +1,52 @@
+.panel-body ul {
+    text-align: center;
+}
+
+ul {
+    list-style-type:none;
+}
+
+#panel-heading {
+    background: lightblue;
+    opacity: .8;
+}
+
+#jumbo {
+    background: lightblue;
+    opacity: .8;
+}
+
+body {
+    background-image: url("../images/ocean\ sunrise.jpg");
+    background-repeat: no-repeat;
+}
+
+.result {
+    font-size: 18px;
+}
+
+#city {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#results-body {
+    background: rgb(247, 231, 181);
+}
+
+.checkbox {
+    padding: 5px;
+}
+
+.city-search {
+    margin-top: 15px;
+}
+
+#reset-button-city-search {
+    margin-top: 20px;
+    margin-left: 40px;
+
+    
+}
+
