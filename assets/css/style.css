@@ -1,0 +1,43 @@
+
+
+#logo {
+    color: orange;
+    background: lightblue;
+}
+
+#logo:hover {
+    color: hotpink;
+    background: rgb(224, 199, 248);
+}
+
+
+
+
+body {
+    background-image: url("../images/beachcrab.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+}
+
+#top-title,
+#title {
+    font-size: 38px;
+    font-weight: bolder;
+    color: black;
+    
+}
+
+#top-title:hover {
+    color: blue
+}
+
+#title:hover {
+    color: blue;
+}
+
+.info {
+    font-size: 26px;
+    font-weight: bold;
+}
+

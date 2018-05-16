@@ -1,3 +1,15 @@
+
+#logo {
+    color: orange;
+    background: lightblue;
+}
+
+#logo:hover {
+    color: hotpink;
+    background: rgb(224, 199, 248);
+}
+
+
 .panel-body ul {
     text-align: center;
 }
@@ -46,7 +58,10 @@ body {
 #reset-button-city-search {
     margin-top: 20px;
     margin-left: 40px;
+}
 
-    
+#home-button {
+    margin-top: 20px;
+    margin-left: 40px;
 }
 
