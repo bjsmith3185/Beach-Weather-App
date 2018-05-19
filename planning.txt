@@ -2,6 +2,7 @@
 The api for high and low tide is in the practice with api html file
 The api for all other weather info is tides and currents noaa
 
+search api for resturants, pier info, fishing info, concert/city info 
 
 pages;
     home

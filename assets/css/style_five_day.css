@@ -1,15 +1,27 @@
+* { box-sizing: border-box; }
+
+   /* Style for NavBar */
+
+.navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+  }
+
 
 #logo {
-    color: orange;
-    background: lightblue;
+    color: black;
+    background: darkgray;
 }
 
 #logo:hover {
-    color: hotpink;
-    background: rgb(224, 199, 248);
+    color: white;
+    background: blue;
 }
 
-
+   /* end of .navbar  */
 .panel-body ul {
     text-align: center;
 }
@@ -29,7 +41,7 @@ ul {
 }
 
 body {
-    background-image: url("../images/ocean\ sunrise.jpg");
+    background-image: url("../images/backgrounds/palmtree_water.jpeg");
     background-repeat: no-repeat;
 }
 

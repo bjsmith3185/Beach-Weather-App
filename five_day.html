@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
 <head>
-    <title>Beach Weather App</title>
+    <title>Capt Emmett's Beach App</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style_five_day.css">
 </head>
 
 <body>
@@ -51,18 +51,24 @@
 <!--  End of Navbar-->
 
 <div class="container">
-    <div class="jumbotron text-center" id="jumbo">
-        <h1>Get the latest 5 day weather forecast!</h1>
-        <p>Enter your city of interest below.</p>
+    <div class="row">
+        <div class="col-lg-3 col-xs-2"></div>
+        <div class="col-lg-6 col-xs-8">
+            <div class="jumbotron text-center" id="jumbo">
+                <h1>Get the latest 5 day weather forecast!</h1>
+                <p>Enter your city of interest below.</p>
 
-        <form class="form-inline text-center">
-            <input type="text" class="form-control" id="input" onfocus="this.value=''" value="Search city..">
-            <br>
-            
-            <br>
+                <form class="form-inline text-center">
+                    <input type="text" class="form-control" id="input" onfocus="this.value=''" value="Search city..">
+                    <br>
+                    
+                    <br>
 
-            <button type="button" value="button" class="btn btn-primary city-search" id="submit"><span class="glyphicon glyphicon-search"></span> Get 5 day bro!</button>
-        </form>
+                    <button type="button" value="button" class="btn btn-primary city-search" id="submit"><span class="glyphicon glyphicon-search"></span> Get 5 day bro!</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-4 col-xs-2"></div>    
     </div>
 </div>
 
@@ -71,18 +77,18 @@
 
 <div class="container" id="jumbo-results">
     <div class="row">
-        <div class="col-lg-4"></div> 
-            <div class="col-lg-4 col-xs-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading" id="panel-heading">
+        <div class="col-lg-4 col-xs-2"></div> 
+        <div class="col-lg-4 col-xs-8">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="panel-heading">
                     <h3 class="panel-title text-center" id="city" >Results for:</h3>
-                    </div>
-                    <div class="each-day" id="results-body">
-                        <!-- this is where the 5 day forecast will be appended -->
-                    </div>
+                </div>
+                <div class="each-day" id="results-body">
+                    <!-- this is where the 5 day forecast will be appended -->
                 </div>
             </div>
-        <div class="col-lg-4"></div>    
+        </div>
+        <div class="col-lg-4 col-xs-2"></div>  
     </div>
 </div>
 

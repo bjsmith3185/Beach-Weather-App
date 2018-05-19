@@ -1,6 +1,8 @@
 
 * { box-sizing: border-box; }
 
+   /* Style for NavBar */
+
 .navbar-fixed-top {
     position: fixed;
     right: 0;
@@ -20,6 +22,10 @@
     background: blue;
 }
 
+   /* end of .navbar  */
+
+   /* Start of body container  */
+
 .body-container {
     background-image: url("../images/backgrounds/beach_post_rope.jpeg");
     background-repeat: no-repeat;
@@ -27,6 +33,9 @@
     background-position: center;
     height:800px;
 }
+
+
+
 
 .header {
     text-align: center;
