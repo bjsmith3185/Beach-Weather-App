@@ -1,23 +1,49 @@
 
+* { box-sizing: border-box; }
+
+.navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+  }
+
 
 #logo {
-    color: orange;
-    background: lightblue;
+    color: black;
+    background: darkgray;
 }
 
 #logo:hover {
-    color: hotpink;
-    background: rgb(224, 199, 248);
+    color: white;
+    background: blue;
+}
+
+.body-container {
+    background-image: url("../images/backgrounds/beach_post_rope.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:800px;
+}
+
+.header {
+    text-align: center;
+    padding-top: 100px;
+    
+}
+
+#header {
+    font-weight: bolder;
+    font-size: 50px;
+    color: black;
 }
 
 
 
-
-body {
-    background-image: url("../images/beachcrab.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-position: center; */
+#header:hover {
+    color: orange;
 }
 
 #top-title,
