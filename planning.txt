@@ -1,4 +1,8 @@
 
+The api for high and low tide is in the practice with api html file
+The api for all other weather info is tides and currents noaa
+
+
 pages;
     home
         - navbar with link to each page
@@ -16,13 +20,23 @@ pages;
             - sun rise
             - sun set
             - display image for current conditions
+        - reset button
+        - home button 
+    weather search 5 day forecast
+        - input text for any city
+            - display
+                - date
+                - conditions
+                - high temp
+                - low temp
+                - humidity
+            - reset button
+            - home button
     beach weather
         - select from city list
         - check boxes
             - current conditions
-            - todays forcast
-            - tomorrows forcast
-            - air temp
+            - current temp
             - water temp
             - humidity
             - wind speeed

@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+    <title>Beach Weather App</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="assets/css/style_city_search.css">
+</head> -->
+
+<body>
+
+    
+
+</body>
+
+
+
+<script>
+
+// var date = new Date();
+// var options = {
+//   hour: 'numeric',
+//   minute: 'numeric',
+//   hour12: true
+// };
+// var timeString = date.toLocaleString('en-US', options);
+// console.log(timeString);
+
+
+
+//   function timeConverter(time) {
+//                 var ampm = "";
+//                 var hour = +time.substr(0,2);
+//                 console.log("hour: " + hour);
+//                 var h1 = time.substr(0,1);
+//                 console.log("this is h1: " + h1);
+//                 var h2 = time.substr(1,1);
+//                 console.log("this is h2: " + h2);
+//                 var m = time.substr(3,2);
+//                 console.log("this is hr: " + hour + " this is m: " + m);
+
+//                     if (hour < 13) {
+//                         ampm = "AM";
+//                         } else {
+//                             ampm = "PM";
+//                         };
+//                    //     console.log("this is am/pm: " + ampm);
+//                     if (0 < hour < 10) {
+//                         return outPuttime = h2 + ":" + m + " " + ampm;
+//                        // console.log("this is the new time: " + outPuttime);
+//                         } else if (10 < hour < 13) {
+//                            return outPuttime = h1 + h2 + ":" + m + " " + ampm;
+//                         } else if (22 > hour > 12) {
+//                             var a = hour - 12;
+//                             console.log("This is a: " +a);
+//                           //  h2 = a;
+//                            return outPuttime = a + ":" + m + " " + ampm;
+//                         } else if (hour > 21) {
+//                             var b = hour - 12;
+//                             console.log("This is b: " + b);
+//                           return  outPuttime = b + ":" + m + " " + ampm;
+//                         }
+//                   };
+
+//                   var outputTime;
+                  var time = "20:12";
+// function timeConverter(time) {
+                
+//                 var hour = +time.substr(0,2);
+//                 console.log("hour: " + hour);
+//                 var h1 = time.substr(0,1);
+//                 console.log("this is h1: " + h1);
+//                 var h2 = time.substr(1,1);
+//                 console.log("this is h2: " + h2);
+//                 var m = time.substr(3,2);
+//                 console.log("this is hr: " + hour + " this is m: " + m);
+
+//                 console.log("math: " + (hour - 12) + ":" + m + " PM");
+                
+                    // if (hour < 10) {
+                    //   //  return outputTime = h2 + ":" + m + " AM";
+                    //         alert(h2 + ":" + m + " AM");
+                    //     } else if (9 < hour < 13) {
+                    //         return outputTime = hour + ":" + m + " AM";
+                    //         alert(hour + ":" + m + " AM");
+                    //     } else if (13 < hour < 24) {
+                    //         return outputTime = (hour - 12) + ":" + m + " PM";
+                    //         alert((hour - 12) + ":" + m + " PM");
+                    //     } 
+                                   
+                  
+
+
+//                   };
+
+//    console.log( timeConverter(time));
+      
+function convertTime24to12(time24){
+    var tmpArr = time24.split(':'), time12;
+    if(+tmpArr[0] == 12) {
+        time12 = tmpArr[0] + ':' + tmpArr[1] + ' pm';
+    } else {
+        if(+tmpArr[0] == 00) {
+            time12 = '12:' + tmpArr[1] + ' am';
+         } else {
+            if(+tmpArr[0] > 12) {
+                time12 = (+tmpArr[0]-12) + ':' + tmpArr[1] + ' pm';
+            } else {
+                time12 = (+tmpArr[0]) + ':' + tmpArr[1] + ' am';
+                }
+            }
+        }
+    return time12;
+};
+
+var time12hour = convertTime24to12(time);
+console.log("new time: " + time12hour);
+      
+
+
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="assets/javascript/js_city-search.js"></script> -->
+
+</body>
+</html>

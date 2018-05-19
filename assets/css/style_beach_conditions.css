@@ -1,0 +1,74 @@
+#logo {
+    color: orange;
+    background: lightblue;
+}
+
+#logo:hover {
+    color: hotpink;
+    background: rgb(224, 199, 248);
+}
+
+body {
+    background-image: url("../images/beachcrab.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+}
+
+#jumbo {
+    background: lightblue;
+    opacity: .8;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    border: 1px solid orange;
+}
+
+#panel-heading {
+    background: lightblue;
+    opacity: .8;
+}
+
+#city {
+    font-size: 20px;
+    font-weight: bolder;
+
+}
+
+.results {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#results-body {
+    background: rgb(247, 231, 181);
+}
+
+.checkbox {
+    padding: 10px;
+}
+
+#submit {
+    background: rgb(210, 210, 248);
+}
+
+#submit:hover {
+    background: rgb(142, 241, 231);
+    border: 3px solid orange;
+}
+
+
+#reset-button-city-search {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+#home-button {
+    margin-top: 20px;
+    margin-left: 40px;
+    background: yellowgreen;
+}
+
