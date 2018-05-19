@@ -96,13 +96,23 @@ var capitalCity = city.charAt(0).toUpperCase() + city.slice(1);
     } else if (city === "charleston") {
         cityForTide = "&station=8665530";
     };
-    
     console.log("this is cityForTide var: " + cityForTide);
+
+    //-------------- using the current date for api search ---
+
+    var now = moment().format('YYYYMMDD');
+
+    console.log(now);
+
+
 
     var beginning = "https://tidesandcurrents.noaa.gov/api/datagetter?product=predictions&datum=MLLW";
     var ending = "&interval=hilo&units=english&time_zone=lst&application=NOS.COOPS.TAC.WL&format=json";
-    var start = "&begin_date=20180517";
-    var end = "&end_date=20180518";
+    var start = "&begin_date=" + now;
+    var end = "&end_date=" + now;
+
+    // var start = "&begin_date=20180517";
+    // var end = "&end_date=20180518";
 
     var queryURLtide = beginning + start + end + cityForTide + ending;
     console.log("this is tide url " + queryURLtide);
@@ -158,13 +168,14 @@ var capitalCity = city.charAt(0).toUpperCase() + city.slice(1);
   
     $("#reset-button-city-search").on("click", function() {
   
-          $("#jumbo-results").hide();
-          $("#jumbo").show();
-          $("#currentTemperatureID").prop("checked", "checked");  
-          $("#humidityID").prop("checked", "checked");
-          $("#windID").prop("checked", "checked");
-        //   $("#sunRiseID").prop("checked", "checked");
-        //   $("#sunSetID").prop("checked", "checked");
+        $("#jumbo-results").hide();
+        $("#jumbo").show();
+        $("#currentConditionID").prop("checked", "checked");  
+        $("#currentTemperatureID").prop("checked", "checked");  
+        $("#humidityID").prop("checked", "checked");
+        $("#windID").prop("checked", "checked");
+        $("#waterTemperatureID").prop("checked", "checked");
+        $("#tidesID").prop("checked", "checked");
         //   $("#input").val("Search for City");
  
     });

@@ -56,6 +56,13 @@ pages;
     radar
         - enter city
         - display current weather radar
+    picture page
+        - carosel of pictures from diferent cities 
+            - dropdown select for city
+                - beach/ocean
+                - golf
+                - resturants
+                - shopping
 
 
 
