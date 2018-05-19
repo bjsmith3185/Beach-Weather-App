@@ -8,66 +8,65 @@
    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/picture_carousel.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" id="logo" href="assets/images/captEmmett.jpg">Capt. Emmett</a>
-          </div>
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                         
-              <li class="dropdown">
-                <a href="https://www.google.com" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weather Search <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="index.html">Home:</a></li>
-                  <li><a href="city_search.html">By City:</a></li>
-                  <li><a href="five_day.html">5 Day Forecast:</a></li>
-                  <li><a href="beach_conditions.html">Beach Conditions:</a></li>
-                  <li><a href="#">Fishing Forcast:</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Current Radar</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Random Fish Pics</a></li>
-                </ul>
-              </li>
+            <a class="navbar-brand" id="logo" href="index.html">Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+                <li class="dropdown-header">Weather Search</li>
+                <li><a href="city_search.html">By City:</a></li>
+                <li><a href="five_day.html">5 Day Forecast:</a></li>
+                <li><a href="beach_conditions.html">Beach Conditions:</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Beach Attractions</li>
+                <li><a href="picture_carousel.html">Link</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Current Radar</li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Pictures</li>
+                <li><a href="#">Fish Pics</a></li>
+                <li><a href="#">Capt Emmett Pics</a></li>
             </ul>
-                    
-          </div><!-- /.navbar-collapse -->
+        
+            </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
-      </nav>
+    </nav>
 <!--  End of Navbar-->
 
-<div class="container" id="jumbo1">
+<div class="container" id="search-container">
     <div class="row">
         <div class="col-xs-4"></div>
         <div class="col-xs-4">
             <div class="container-submit" id="jumbo">
                 <div class="select-box">
                     <form id="form">
-                        <select name="Cities" id="cities">
-                            <option value="north myrtle beach">North Myrtle Beach, SC</option>
-                            <option value="wrightsville">Wrightsville,NC</option>
-                            <option value="myrtle beach">Myrtle Beach, SC</option>
-                            <option value="charleston">Charleston, SC</option>
+                        <select name="search" id="carousel-search">
+                            <option value="beach-carousel">Beach Pictures</option>
+                            <option value="shopping-carousel">Shopping Pictures</option>
+                            <option value="golf-carousel">Golf Pictures</option>
+                            <option value="eatting-carousel">Restaurant Pictures</option>
                         </select>
                     <!-- </form> -->
                 <!-- </div> -->
                         
-                    <div class="radio-button">
+                    <!-- <div class="radio-button">
                         <label>
                             <input type="radio" name="select-picture" id="beach-pictures" value="">Beach Pictures
                         </label>
@@ -89,13 +88,12 @@
                         <label>
                             <input type="radio" name="select-picture" id="fish-pictures" value="">Fish Pictures
                         </label>
-                    </div>
-                   
-                    
+                    </div> -->
+       
               
                 </form>
 
-                        <input type="submit" id="submit" value="Get Pictures Bro!">
+                        <input type="submit" id="submit" value="See Pictures Bro!">
                                 
                 </div>
             </div>
@@ -105,28 +103,368 @@
 
 
 
-<div class="container" id="jumbo-results">
+<div class="container" id="beach-carousel">    <!--   beginning of beach carousel data-pause="hover"-->
     <div class="row">
-        <div class="col-xs-8"></div> 
-            <div class="col-xs-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading" id="panel-heading">
-                    <h3 class="panel-title text-center" id="city" >Results for:</h3>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8 border-for-carousel">
+            
+            <div id="carousel-example-generic" class="carousel slide"  data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-0" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-1" data-slide-to="1"></li>
+                  <li data-target="#carousel-2" data-slide-to="2"></li>
+                  <li data-target="#carousel-3" data-slide-to="0" ></li>
+                  <li data-target="#carousel-4" data-slide-to="0" ></li>
+                  <li data-target="#carousel-5" data-slide-to="0" ></li>
+                  <li data-target="#carousel-6" data-slide-to="0" ></li>
+                </ol>
+              
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner"  role="listbox">
+                    <div class="item active" id="carousel-0">
+                        <img src="assets/images/carousel_beaches/boardwalk_at_beach.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Myrtle Beach Boardwalk
+                        </div>
                     </div>
-                    <div class="panel-body" id="results-body">
 
-                            <div class="results" id="display"></div>
-                            <div class="results" id="current"></div>
-                            <div class="results" id="temp"></div>
-                            <div class="results" id="humidity"></div>
-                            <div class="results" id="wind"></div>
-                            <div class="results" id="high-tide1"></div>
-                            <div class="results" id="low-tide1"></div>
+                    <div class="item" id="carousel-1">
+                        <img src="assets/images/carousel_beaches/resort.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Myrtle Beach Resort
+                        </div>
                     </div>
+
+                    <div class="item" id="carousel-2">
+                        <img src="assets/images/carousel_beaches/17th-ave.jpg" alt="...">
+                        <div class="carousel-caption">
+                            17th Ave Access
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-3">
+                        <img src="assets/images/carousel_beaches/cherry-grove-end.jpg" alt="...">
+                        <div class="carousel-caption">
+                            End of Cherry Grove Beach
+                        </div>
+                    </div>
+            
+                    <div class="item" id="carousel-4">
+                        <img src="assets/images/carousel_beaches/myrtle-beach-boardwalk.jpg" alt="...">
+                        <div class="carousel-caption">
+                        Myrtle Beach Boardwalk
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-5">
+                        <img src="assets/images/carousel_beaches/Northmyrtle.jpg" alt="...">
+                        <div class="carousel-caption">
+                            North Myrtle Beach
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-6">
+                        <img src="assets/images/carousel_beaches/springmaid-pier.jpg" alt="...">
+                        <div class="carousel-caption">
+                            SpringMaid Pier
+                        </div>
+                    </div>
+
+
+                    Beach Pictures
                 </div>
+              
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
             </div>
-    </div>
-</div>
+        </div>
+    </div> 
+</div> <!--   end of beach carousel -->
+
+
+
+
+
+
+<!--   beginning of golf carousel -->
+<div class="container" id="golf-carousel">   
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8 border-for-carousel">
+            
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                        <li data-target="#carousel-0" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-1" data-slide-to="1"></li>
+                        <li data-target="#carousel-2" data-slide-to="2"></li>
+                        <li data-target="#carousel-3" data-slide-to="0" ></li>
+                        <li data-target="#carousel-4" data-slide-to="0" ></li>
+                        <li data-target="#carousel-5" data-slide-to="0" ></li>
+                        <li data-target="#carousel-6" data-slide-to="0" ></li>
+                </ol>
+              
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active" id="carousel-0">
+                        <img src="assets/images/carousel_golf/21164.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Myrtle Beach Golf
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-1">
+                        <img src="assets/images/carousel_golf/kings-north-2.jpg" alt="...">
+                        <div class="carousel-caption">
+                                Myrtle Beach Golf
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-2">
+                        <img src="assets/images/carousel_golf/tidewater-golf-club.jpg" alt="...">
+                        <div class="carousel-caption">
+                                Myrtle Beach Golf
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-3">
+                        <img src="assets/images/carousel_golf/kingsnorth.jpg" alt="...">
+                        <div class="carousel-caption">
+                                Myrtle Beach Golf
+                        </div>
+                    </div>
+            
+                    <div class="item" id="carousel-4">
+                        <img src="assets/images/carousel_golf/myrtle-beach-golf-courses.jpg" alt="...">
+                        <div class="carousel-caption">
+                                Myrtle Beach Golf
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-5">
+                        <img src="assets/images/carousel_golf/p.jpg" alt="...">
+                        <div class="carousel-caption">
+                                Myrtle Beach Golf
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-6">
+                        <img src="assets/images/carousel_golf/Southcreek10.jpg" alt="...">
+                        <div class="carousel-caption">
+                            SMyrtle Beach Golf
+                        </div>
+                    </div>
+
+
+                    Golf Pictures
+                </div>
+              
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div> 
+</div> <!--   end of golf carousel -->
+
+
+
+
+
+<!--   beginning of shopping carousel -->
+<div class="container" id="shopping-carousel">    
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8 border-for-carousel">
+            
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                        <li data-target="#carousel-0" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-1" data-slide-to="1"></li>
+                        <li data-target="#carousel-2" data-slide-to="2"></li>
+                        <li data-target="#carousel-3" data-slide-to="0" ></li>
+                        <li data-target="#carousel-4" data-slide-to="0" ></li>
+                        <li data-target="#carousel-5" data-slide-to="0" ></li>
+                        <li data-target="#carousel-6" data-slide-to="0" ></li>
+                </ol>
+              
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active" id="carousel-0">
+                        <img src="assets/images/carousel_shopping/bargain.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Bargain Beachwear
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-1">
+                        <img src="assets/images/carousel_shopping/BroadwaySummer2.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Broadway at the Beach
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-2">
+                        <img src="assets/images/carousel_shopping/Callahans.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Callahans
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-3">
+                        <img src="assets/images/carousel_shopping/gay-dolphin.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Gay Dolphin
+                        </div>
+                    </div>
+            
+                    <div class="item" id="carousel-4">
+                        <img src="assets/images/carousel_shopping/publix.jpg" alt="...">
+                        <div class="carousel-caption">
+                        Publix
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-5">
+                        <img src="assets/images/carousel_shopping/tanger.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Tanger
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-6">
+                        <img src="assets/images/carousel_shopping/wings-beachwear-myrtle.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Wings Beachwear
+                        </div>
+                    </div>
+
+
+                    Shopping Pictures
+                </div>
+              
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div> 
+</div> <!--   end of shopping carousel -->
+
+
+
+
+
+<!--   beginning of eatting carousel -->
+<div class="container" id="eatting-carousel">    
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8 border-for-carousel">
+            
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                        <li data-target="#carousel-0" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-1" data-slide-to="1"></li>
+                        <li data-target="#carousel-2" data-slide-to="2"></li>
+                        <li data-target="#carousel-3" data-slide-to="0" ></li>
+                        <li data-target="#carousel-4" data-slide-to="0" ></li>
+                        <li data-target="#carousel-5" data-slide-to="0" ></li>
+                        <li data-target="#carousel-6" data-slide-to="0" ></li>
+                </ol>
+              
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active" id="carousel-0">
+                        <img src="assets/images/carousel_restaurants/dinos.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Myrtle Beach Boardwalk
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-1">
+                        <img src="assets/images/carousel_restaurants/duffy.jpg" alt="...">
+                        <div class="carousel-caption">
+                           Duffys
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-2">
+                        <img src="assets/images/carousel_restaurants/ellas.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Ellas
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-3">
+                        <img src="assets/images/carousel_restaurants/georgio.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Georgios Pizza
+                        </div>
+                    </div>
+            
+                    <div class="item" id="carousel-4">
+                        <img src="assets/images/carousel_restaurants/hamburger-joes-1.jpg" alt="...">
+                        <div class="carousel-caption">
+                       Hamburger Joes
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-5">
+                        <img src="assets/images/carousel_restaurants/hoskins-restaurant.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Hoskins
+                        </div>
+                    </div>
+
+                    <div class="item" id="carousel-6">
+                        <img src="assets/images/carousel_restaurants/mr_g.jpg" alt="...">
+                        <div class="carousel-caption">
+                            Mr. G
+                        </div>
+                    </div>
+
+
+                   Restaurant Pictures
+                </div>
+              
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div> 
+</div> <!--   end of eattting carousel -->
+
+
+
         
     <div id="reset-button-bottom">
         <button type="button" class="btn btn-info" id="reset-button-city-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Reset Search</button>
