@@ -64,6 +64,10 @@ pages;
                 - golf
                 - resturants
                 - shopping
+    Picture page 2
+        - page with thumbnails in columns
+        - link thumbnails to picture 
+        
 
 
 

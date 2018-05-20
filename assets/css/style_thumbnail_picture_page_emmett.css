@@ -1,0 +1,119 @@
+* {box-sizing: border-box}
+
+
+.container {
+    margin-top: 70px;
+    
+    }
+
+    #pic-column {
+        margin: 15px auto;
+    }
+
+#header {
+    text-align: center;
+
+}
+
+#results-title {
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+#results-header {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+/* img {
+    max-width: 300px;
+    max-height: 300px;
+    padding: 15px;
+} */
+
+
+/* .center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ } */
+
+
+
+/* code for text over image */
+
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.wrapper:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+@media (max-width: 2400px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}

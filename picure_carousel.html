@@ -12,50 +12,58 @@
 </head>
 
 <body>
+<div class="body-container">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="logo" href="index.html">Home</a>
+      </div>
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" id="logo" href="index.html">Home</a>
-            </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+          <li class="dropdown-header">Weather Search</li>
+          <li><a href="city_search.html">By City:</a></li>
+          <li><a href="five_day.html">5 Day Forecast:</a></li>
+          <li><a href="beach_conditions.html">Beach Conditions:</a></li>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-                <li class="dropdown-header">Weather Search</li>
-                <li><a href="city_search.html">By City:</a></li>
-                <li><a href="five_day.html">5 Day Forecast:</a></li>
-                <li><a href="beach_conditions.html">Beach Conditions:</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Beach Attractions</li>
-                <li><a href="picture_carousel.html">Link</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Current Radar</li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Pictures</li>
-                <li><a href="#">Fish Pics</a></li>
-                <li><a href="#">Capt Emmett Pics</a></li>
-            </ul>
-        
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+          <li role="separator" class="divider"></li>
+          <li class="dropdown-header">Current Radar</li>
+          <li><a href="#">Weather Radar Map</a></li>
+
+          <li role="separator" class="divider"></li>
+          <li class="dropdown-header">Pictures</li>
+          <li><a href="picure_carousel.html">Area Attractions</a></li>
+          <li><a href="#">Fish Pics</a></li>
+          <li><a href="#">Capt Emmett Pics</a></li>
+          
+         
+        </ul>
+    
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+   </nav>
+</div>
 <!--  End of Navbar-->
 
 <div class="container" id="search-container">
     <div class="row">
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4">
-            <div class="container-submit" id="jumbo">
-                <div class="select-box">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
+
+            <div class="panel panel-default" id="jumbo">
+                <div class="panel-heading" id="panel-heading">
+                    <h3 class="panel-title text-center" id="search-heading" >Browse Pictures:</h3>
+                </div>
+                <div class="panel-body" id="search-body">
                     <form id="form">
                         <select name="search" id="carousel-search">
                             <option value="beach-carousel">Beach Pictures</option>
@@ -63,37 +71,9 @@
                             <option value="golf-carousel">Golf Pictures</option>
                             <option value="eatting-carousel">Restaurant Pictures</option>
                         </select>
-                    <!-- </form> -->
-                <!-- </div> -->
-                        
-                    <!-- <div class="radio-button">
-                        <label>
-                            <input type="radio" name="select-picture" id="beach-pictures" value="">Beach Pictures
-                        </label>
-                    </div>
-                         
-                    <div class="radio-button">
-                        <label>
-                            <input type="radio" name="select-picture" id="gold-pictures" value="">Golf Pictures
-                        </label>
-                    </div>
-                   
-                    <div class="radio-button">
-                        <label>
-                            <input type="radio" name="select-picture" id="food-pictures" value="">Food Pictures
-                        </label>
-                    </div>
-                   
-                    <div class="radio-button">
-                        <label>
-                            <input type="radio" name="select-picture" id="fish-pictures" value="">Fish Pictures
-                        </label>
-                    </div> -->
-       
-              
-                </form>
-
-                        <input type="submit" id="submit" value="See Pictures Bro!">
+                    </form>
+  
+                    <input type="submit" id="submit" value="See Pictures Bro!">
                                 
                 </div>
             </div>
@@ -105,8 +85,8 @@
 
 <div class="container" id="beach-carousel">    <!--   beginning of beach carousel data-pause="hover"-->
     <div class="row">
-        <div class="col-xs-2"></div>
-        <div class="col-xs-8 border-for-carousel">
+        <!-- <div class="col-xs-2"></div> -->
+        <div class="col-xs-12 border-for-carousel">
             
             <div id="carousel-example-generic" class="carousel slide"  data-ride="carousel">
                 <!-- Indicators -->
@@ -399,7 +379,7 @@
                     <div class="item active" id="carousel-0">
                         <img src="assets/images/carousel_restaurants/dinos.jpg" alt="...">
                         <div class="carousel-caption">
-                            Myrtle Beach Boardwalk
+                            Dinos!
                         </div>
                     </div>
 
@@ -470,9 +450,9 @@
         <button type="button" class="btn btn-info" id="reset-button-city-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Reset Search</button>
     </div>
     
-    <div id="btn-home">
+    <!-- <div id="btn-home">
         <a href="index.html"><button id="home-button" class="btn btn-warning"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home Page</button></a>
-    </div>
+    </div> -->
 
 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
