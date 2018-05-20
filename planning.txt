@@ -67,10 +67,43 @@ pages;
     Picture page 2
         - page with thumbnails in columns
         - link thumbnails to picture 
-        
 
 
+------------------------------------
+modifications
 
+current weather page
+    - push down the container holding search info
+    - less space between checkboxes vertical
+    - larger results font size
+    - color for display container
+    - remove bullets from list
+    - relocate reset button
+
+5 day forcast
+    - push down the container holding search info
+    - push down results container also
+    - center results li 
+    - put date on a line above the other results
+    - relocate reset button
+
+beach forecast
+    - push down the container holding search info
+    - make a container with color for search info??
+    - center results container and make wider
+    - bold the results city
+
+attractions
+    - push down the search container
+    - give container some color
+    - space between dropdown and search button
+    - change background for results, maybe solid color
+
+emmett thumbnails
+    - push down title container
+    - smaller font on title?
+    - get the title font on one line
+    = use a color background
 
 
 
