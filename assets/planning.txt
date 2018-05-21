@@ -87,7 +87,7 @@ current weather page
     - put date on a line above the other results
     - relocate reset button
 
-beach forecast 
+beach forecast (done)
     - fix navbar it is too wide....
     - push down the container holding search info
     - make a container with color for search info??
@@ -172,3 +172,39 @@ layout for 5 day forcast
 date, description;
 high, low;
 humidity 
+
+
+
+
+
+------------------------------------------------
+logic for determining high or low tide
+
+locate predictions[0].type;
+    check .type for "L" or "H";
+        if "L"
+            lowTide1 = function24hr(.t);
+        if "H"
+            highTide1 = function24hr(.t);
+
+locate predictions[1].type;
+    check .type for "L" or "H";
+        if "L"
+            lowTide1 = function24hr(.t);
+        if "H"
+            highTide1 = function24hr(.t);
+
+locate predictions[2].type;
+    check .type for "L" or "H";
+        if "L"
+            lowTide1 = function24hr(.t);
+        if "H"
+            highTide1 = function24hr(.t);
+
+ check predictions[3] for a value or not;
+    if true 
+        check .type for "L" or "H";
+            if "L"
+            lowTide1 = function24hr(.t);
+        if "H"
+            highTide1 = function24hr(.t);

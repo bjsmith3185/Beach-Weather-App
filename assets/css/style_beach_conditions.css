@@ -72,7 +72,11 @@ body {
     /* background-position: center; */
 }
 
-#jumbo {
+.container {
+    margin-top: 60px;
+}
+
+#jumbo1 {
     background: lightblue;
     opacity: .8;
     text-align: center;
@@ -82,7 +86,12 @@ body {
     font-size: 18px;
     font-weight: bolder;
     border: 1px solid orange;
+    margin-bottom: 70px;
 }
+
+/* #jumbo-results {
+    margin-top: 60px;
+} */
 
 #panel-heading {
     background: lightblue;
@@ -92,12 +101,14 @@ body {
 #city {
     font-size: 20px;
     font-weight: bolder;
+    color: black;
 
 }
 
 .results {
     font-size: 20px;
     font-weight: bolder;
+    text-align: center;
 }
 
 #results-body {
@@ -119,14 +130,19 @@ body {
 
 
 #reset-button-city-search {
-    margin-top: 20px;
-    margin-left: 40px;
+  background: red;
+
 }
 
-#home-button {
+#reset-button-bottom {
+    margin-left: 40px;
+    margin-bottom: 90px;
+}
+
+/* #home-button {
     margin-top: 20px;
     margin-left: 40px;
     background: yellowgreen;
-}
+} */
 
 

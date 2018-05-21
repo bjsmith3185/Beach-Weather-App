@@ -1,0 +1,130 @@
+<html>
+<body>
+
+<div id="high-tide1"></div>
+<div id="low-tide1"></div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+
+
+
+var response = {
+    "predictions": [
+        {
+            "t": "2018-05-21 06:24",
+            "type": "L",
+        },
+        {
+            "t": "2018-05-21 12:41",
+            "type": "H",
+        },
+        {
+            "t": "2018-05-21 18:36",
+            "type": "L",
+        }
+    ]
+}
+
+// console.log("this is response: " + response);
+    
+// console.log("this is response.predictions: " + response.predictions);
+    
+// console.log("this is predictions.length: " + response.predictions.length);  
+
+var length = response.predictions.length;
+console.log("this is length: " + length);
+// console.log( response);
+var x = response.predictions;
+var lowTide1;
+var lowTide2;
+var highTide1;
+var highTide2;
+
+
+
+
+
+
+function determineHighOrLowTide(x,length) {
+    for(var i = 0; i < length; i++ ) {
+        // console.log("this is type inside the for loop: " + x[i].type)
+        if (x[i].type === "L") {
+            if(i <= 1) {
+                lowTide1 = x[i].t.substr(11,5);
+                // console.log("this is lowTide1 var: " + lowTide1);
+            } else if (i > 1) {
+                lowTide2 = x[i].t.substr(11,5);
+            }
+        } else if (x[i].type === "H") {
+            if (i <= 1) {
+                highTide1 = x[i].t.substr(11,5);
+            } else if (i > 1) {
+                highTide2 = x[i].t.substr(11,5);
+            }
+        }
+    }
+}
+    
+    determineHighOrLowTide(x,length);
+
+console.log("this is low tide 1: " + lowTide1);
+console.log("this is low tide 2: " + lowTide2);
+console.log("this is high tide 1: " + highTide1);
+console.log("this is high tide 2: " + highTide2);
+
+var highTide2withAnd = " & " + highTide2;
+var lowTide2withAnd = " & " + highTide1;
+
+console.log(lowTide2withAnd);
+
+
+// total the l and h and use the total number to determine which one get added in the 3 function
+
+  var tidesID = "one";       
+//    $("#tidesID").prop("checked");
+             if (tidesID) {
+                if (length === 3) {
+                    if (highTide2 === undefined) {
+                        $("#high-tide1").text("High Tide: " + highTide1);
+                        $("#low-tide1").text("Low Tide: " + lowTide1 + lowTide2withAnd);
+                    } else if (lowTide2 === undefined) {
+                        $("#high-tide1").text("High Tide: " + highTide1 + highTide2withAnd);
+                        $("#low-tide1").text("Low Tide: " + lowTide1);
+                        }
+
+                } else if (length === 4) {
+                    $("#high-tide1").text("High Tide: " + highTide1 + highTide2withAnd);
+                    $("#low-tide1").text("Low Tide: " + lowTide1 + lowTide2withAnd);
+                    } 
+
+            } else {
+                 $("#high-tide1").text("");
+                 $("#low-tide1").text("");
+             };
+
+
+//  var highTide1 = convertTime24to12(response.predictions[0].t.substr(11,5));
+          
+    
+
+
+                 
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
+
+
