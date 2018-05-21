@@ -1,4 +1,4 @@
-** { box-sizing: border-box; }
+* { box-sizing: border-box; }
 
 /* Style for NavBar */
 
@@ -65,16 +65,14 @@
 
 /* end of .navbar  */
 .container {
-    margin-top: 70px;
+    background: rgb(203, 243, 243);
+    padding-bottom: 50px;
+    }
+
     
-    }
-
-    #pic-column {
-        margin: 15px auto;
-    }
-
 #header {
     text-align: center;
+    margin-top: 65px;
 
 }
 
@@ -104,6 +102,9 @@
 
 
 /* code for text over image */
+#pic-column {
+    margin: 15px auto;
+}
 
 
 /* Container needed to position the overlay. Adjust the width as needed */

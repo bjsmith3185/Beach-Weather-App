@@ -1,8 +1,10 @@
 $(document).ready(function(){
     $('#jumbo-results').hide();
+    $("#reset-button-bottom").hide();
+
 
 $("#submit").on("click", function() {
-
+    $("#reset-button-bottom").show();
     $("#jumbo").hide();
     $("#jumbo-results").show();
 
@@ -45,23 +47,48 @@ $("#submit").on("click", function() {
           var description = response.list[i].weather[0].description;
           console.log(description);
       
-          $(".each-day").append("<div class='fiveDay' id='day-"+counter+"'>Date: <span>" + date + "</span> Condition: <span>" + description + "</span></div>");
+          // $(".each-day").append("<div class='fiveDay' id='day-"+counter+"'>Date: <span>" + date + "</span> Condition: <span>" + description + "</span></div>");
+          // $(".each-day").append("<div class='fiveDay' id='temp-"+counter+"'>High: <span>" + hiTemp + "</span> Low: <span>" + lowTemp + "</span></div>");
+          // $(".each-day").append("<div class='fiveDay' id=humidity-"+counter+"'>Humidity: <span>" + humidity + "% </span></div><br>");
+
+
+
+
+          $(".each-day").append("<div class='fiveDay' id='day-"+counter+"'>Date: <span>" + date + "</span> </div>");
+          $(".each-day").append("<div class='fiveDay' id='day-"+counter+"'>Condition: <span>" + description + "</span></div>");
           $(".each-day").append("<div class='fiveDay' id='temp-"+counter+"'>High: <span>" + hiTemp + "</span> Low: <span>" + lowTemp + "</span></div>");
           $(".each-day").append("<div class='fiveDay' id=humidity-"+counter+"'>Humidity: <span>" + humidity + "% </span></div><br>");
-  
-        
-        
-  
+
+
+
+
+
+
+
+
+   
   }
   //<div id="day-i">date:<span>date</span>Condition:<span>condition</span></div>
-  
-         
-  
-  
   
    }
   });
 
-});
+}); // end of submit.onclick
+
+    $("#reset-button-city-search").on("click", function() {
+
+      $("#jumbo-results").hide();
+      $("#jumbo").show();
+      $("#reset-button-bottom").hide();
+      $(".fiveDay").remove();
+    $("#results-body br").remove();
+
+    $("#input").val("Search for City");
+
+    });
+
+
+
+
 
 }); // document open end

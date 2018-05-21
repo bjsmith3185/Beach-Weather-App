@@ -65,24 +65,33 @@
 
    /* end of .navbar  */
 
-
+body {
+    background: lightcyan;
+}
 
 .panel-body ul {
     text-align: center;
 }
 
 ul {
-    list-style-type:none;
+    list-style-type: none;
 }
 
 #panel-heading {
     background: lightblue;
     opacity: .8;
+    margin-top: 50px;
+}
+
+h3 {
+    font-weight: bolder;
 }
 
 #jumbo {
-    background: lightblue;
+    /* background: lightblue; */
     opacity: .8;
+    margin-top: 30px;
+    /* border: 1px solid cyan; */
 }
 
 body {
@@ -96,12 +105,13 @@ body {
 
 #city {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: bolder;
 
 }
 
 #results-body {
     background: rgb(247, 231, 181);
+    opacity: .8;
 }
 
 .checkbox {
@@ -113,7 +123,7 @@ body {
 }
 
 #reset-button-city-search {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-left: 40px;
 
     

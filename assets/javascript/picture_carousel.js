@@ -3,13 +3,14 @@ $(document).ready(function(){
     $('#golf-carousel').hide();
     $('#shopping-carousel').hide();
     $('#eatting-carousel').hide();
+    $("#reset-button-bottom").hide();
      
      
      $("#submit").on("click", function() {
    //-------- code to hide the search container -----  
       $("#search-container").hide();
-   
-       
+      $("#reset-button-bottom").show();
+    
  //-------- var for search drop down -------
  
         var search = $("#carousel-search").val();
@@ -36,7 +37,14 @@ $(document).ready(function(){
          $("#golf-carousel").hide();
          $("#eatting-carousel").hide();
          $("#search-container").show();
+         $("#reset-button-bottom").hide();
          
+
+
+
+
+
+ 
   
      });
       
