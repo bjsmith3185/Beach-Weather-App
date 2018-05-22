@@ -77,10 +77,14 @@ ul {
     list-style-type: none;
 }
 
+#jumbo-results {
+    margin-top: 60px;
+}
+
 #panel-heading {
     background: lightblue;
     opacity: .8;
-    margin-top: 50px;
+   
 }
 
 h3 {
@@ -125,8 +129,11 @@ body {
 #reset-button-city-search {
     /* margin-top: 20px; */
     margin-left: 40px;
+   
+}
 
-    
+#reset-button-bottom {
+    margin-bottom: 30px;
 }
 
 .fiveDay {
@@ -135,8 +142,4 @@ body {
     
 }
 
-#home-button {
-    margin-top: 20px;
-    margin-left: 40px;
-}
 
