@@ -51,62 +51,56 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+  </div>
 <!--  End of Navbar-->
 
-<div class="container">
+<div class="container" id="jumbo">
     <div class="row">
-        <div class="col-lg-3 col-xs-2"></div>
-        <div class="col-lg-6 col-xs-8">
-            <div class="jumbotron text-center" id="jumbo">
-                <h1>Instant Weather Report</h1>
-                <p>Enter the city you would like current weather deatils for,</p>
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
+            <div class="panel panel-default">
+                <div class="panel-body" id="search-body">
+                    <p id="title">Instant Weather Report</p>
+                    <p id="search-info">Enter the city you would like current weather deatils for,</p>
 
-                <form class="form-inline text-center">
-                    <input type="text" class="form-control" id="input" onfocus="this.value=''" value="Search city..">
-                    <br>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="currentConditionID" checked value="">Current Conditions
-                    </div>
-                    <br>
-                    <!-- <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="todaysForcast" checked value="">Today's Forcast
-                    </div>
-                    <br> -->
-                    <!-- <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="tomorrowsForcast" checked value="">Tomorrow's Forcast
-                    </div>
-                    <br> -->
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="currentTemperatureID" checked="checked" value="">Current Temperature
-                    </div>
-                    <br>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="humidityID" checked="checked" value="">Humidity
-                    </div>
-                    <br>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="windID" checked="checked" value="">Wind Speed
-                    </div>
-                    <br>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="sunRiseID" checked="checked" value="">Sun Rise
-                    </div>
-                    <br>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="sunSetID" checked="checked" value="">Sun Set
-                    </div>
-                    <br>
+                    <form class="form-inline text-center">
+                        <input type="text" class="form-control" id="input" onfocus="this.value=''" value="Search city..">
+                        <br>
 
-                    <button type="button" value="button" class="btn btn-primary city-search" id="submit"><span class="glyphicon glyphicon-search"></span> Search Bro!</button>
-                </form>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="currentConditionID" checked value="">Current Conditions
+                        </div>
+                        
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="currentTemperatureID" checked="checked" value="">Current Temperature
+                        </div>
+                      
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="humidityID" checked="checked" value="">Humidity
+                        </div>
+                      
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="windID" checked="checked" value="">Wind Speed
+                        </div>
+                      
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="sunRiseID" checked="checked" value="">Sun Rise
+                        </div>
+                      
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="sunSetID" checked="checked" value="">Sun Set
+                        </div>
+                      
+
+                        <button type="button" value="button" class="btn btn-primary city-search" id="submit"><span class="glyphicon glyphicon-search"></span> Search Bro!</button>
+                    </form>
+                </div>
             </div>
         </div>      
     </div>
@@ -117,26 +111,26 @@
 
 <div class="container" id="jumbo-results">
     <div class="row">
-        <div class="col-lg-4 col-xs-2"></div> 
-            <div class="col-lg-4 col-xs-8">
+        <div class="col-xs-2"></div> 
+            <div class="col-xs-8">
                 <div class="panel panel-default">
                     <div class="panel-heading" id="panel-heading">
                     <h3 class="panel-title text-center" id="city" >Results for:</h3>
                     </div>
                     <div class="panel-body" id="results-body">
-                        <ul>
-                            <li class="result" id="display"></li>
-                            <li class="result" id="current"></li>
-                            <li class="result" id="temp"></li>
-                            <li class="result" id="humidity"></li>
-                            <li class="result" id="wind"></li>
-                            <li class="result" id="sunrise"></li>
-                            <li class="result" id="sunset"></li>
-                        </ul>
+                       
+                            <div class="result" id="display"></div>
+                            <div class="result" id="current"></div>
+                            <div class="result" id="temp"></div>
+                            <div class="result" id="humidity"></div>
+                            <div class="result" id="wind"></div>
+                            <div class="result" id="sunrise"></div>
+                            <div class="result" id="sunset"></div>
+                       
                     </div>
                 </div>
             </div>
-        <div class="col-lg-4 col-xs-2"></div>    
+        <div class="col-xs-2"></div>    
     </div>
 </div>
 

@@ -2,12 +2,14 @@
 
 $(document).ready(function(){
   $('#jumbo-results').hide();
+  $("#reset-button-bottom").hide();
   
   
   $("#submit").on("click", function() {
 //-------- code to hide the jumbotron-----  
     $("#jumbo").hide();
     $("#jumbo-results").show();
+    $("#reset-button-bottom").show();
     
     var city = $("#input").val();
     console.log("this is " + city);
@@ -50,7 +52,7 @@ $(document).ready(function(){
          var temperatureStatus = $("#currentTemperatureID").prop("checked");
          console.log("this is status for temp: " + temperatureStatus);
          if (temperatureStatus) {
-            $("#temp").text("Temperature: " + response.main.temp);
+            $("#temp").text("Temperature: " + response.main.temp.toFixed() + "°");
             } else {
             $("#temp").text("");
          };
@@ -66,7 +68,7 @@ $(document).ready(function(){
         var windStatus = $("#windID").prop("checked");
         console.log("this is status for wind: " + windStatus);
         if (windStatus) {
-            $("#wind").text("Wind speed: " + response.wind.speed);
+            $("#wind").text("Wind speed: " + response.wind.speed.toFixed() + " mph");
             } else {
             $("#wind").text("");
         };
@@ -74,7 +76,7 @@ $(document).ready(function(){
         var sunriseStatus = $("#sunRiseID").prop("checked");
         console.log("this is status for sunrise: " + sunriseStatus);
         if (sunriseStatus) {
-            $("#sunrise").text("Sunrise: " + changeTime(response.sys.sunrise));
+            $("#sunrise").text("Sunrise: " + convertTime24to12(changeTime(response.sys.sunrise)));
             } else {
             $("#sunrise").text("");
         };
@@ -82,7 +84,7 @@ $(document).ready(function(){
         var sunsetStatus = $("#sunSetID").prop("checked");
         console.log("this is status for sunset: " + sunsetStatus);
         if (sunsetStatus) {
-            $("#sunset").text("Sunset: " + changeTime(response.sys.sunset));
+            $("#sunset").text("Sunset: " + convertTime24to12(changeTime(response.sys.sunset)));
             } else {
             $("#sunset").text("");
         };
@@ -101,15 +103,36 @@ $(document).ready(function(){
 }); // end of on.click
 
 
-// ------------Reset Button --------
-    // clear the input field 
-    // check all boxes 
-    // hide results container 
-    // show jumbotron 
 
+//------------ function to change 24hr to 12hr time ---
+function convertTime24to12(time24){
+    var tmpArr = time24.split(':'), time12;
+    if(+tmpArr[0] == 12) {
+        time12 = tmpArr[0] + ':' + tmpArr[1] + ' pm';
+    } else {
+        if(+tmpArr[0] == 00) {
+            time12 = '12:' + tmpArr[1] + ' am';
+        } else {
+            if(+tmpArr[0] > 12) {
+                time12 = (+tmpArr[0]-12) + ':' + tmpArr[1] + ' pm';
+            } else {
+                time12 = (+tmpArr[0]) + ':' + tmpArr[1] + ' am';
+                }
+            }
+        }
+    return time12;
+    };
+//----------- end of 24 to 12hr time function---------
+
+
+
+
+// ------------Reset Button --------
+   
   $("#reset-button-city-search").on("click", function() {
 
         $("#jumbo-results").hide();
+        $("#reset-button-bottom").hide();
         $("#jumbo").show();
         $("#currentTemperatureID").prop("checked", "checked");  
         $("#humidityID").prop("checked", "checked");

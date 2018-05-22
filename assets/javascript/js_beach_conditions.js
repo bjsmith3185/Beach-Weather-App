@@ -47,7 +47,7 @@ $("#submit").on("click", function() {
         var temperatureStatus = $("#currentTemperatureID").prop("checked");
             // console.log("this is status for temp: " + temperatureStatus);
         if (temperatureStatus) {
-            $("#temp").text("Temperature: " + response.main.temp + "°");
+            $("#temp").text("Temperature: " + response.main.temp.toFixed() + "°");
             } else {
             $("#temp").text("");
         };
@@ -63,7 +63,7 @@ $("#submit").on("click", function() {
         var windStatus = $("#windID").prop("checked");
             // console.log("this is status for wind: " + windStatus);
         if (windStatus) {
-            $("#wind").text("Wind speed: " + response.wind.speed + " mph");
+            $("#wind").text("Wind: " + response.wind.speed.toFixed() + " mph");
             } else {
             $("#wind").text("");
         };
@@ -215,7 +215,7 @@ $("#submit").on("click", function() {
             response =JSON.parse(response);
                 // console.log("response for water-temp api: " + response);     
             
-            var waterTemperature = response.data[1].v;
+            var waterTemperature = response.data[1].v.toFixed();
                 // console.log("water-temperature: " + waterTemperature);
 
             var waterTemperatureID = $("#waterTemperatureID").prop("checked");

@@ -30,7 +30,7 @@ $("#submit").on("click", function() {
     // console.log(last2);
       if ( last2 === "06") {
         //  console.log(response.list[i].dt_txt);
-          var lowTemp = response.list[i].main.temp_min;
+          var lowTemp = response.list[i].main.temp_min.toFixed();
           console.log("low temp " + lowTemp);
           counter++;
           console.log("this is the count " + counter);
@@ -38,7 +38,7 @@ $("#submit").on("click", function() {
   
       if ( last2 === "15") {
          // console.log(response.list[i].dt_txt);
-          var hiTemp = response.list[i].main.temp_max;
+          var hiTemp = response.list[i].main.temp_max.toFixed();
           console.log("hi temp " + hiTemp);
           var date = (response.list[i].dt_txt).substring(5,11);
           console.log(date);
@@ -56,7 +56,7 @@ $("#submit").on("click", function() {
 
           $(".each-day").append("<div class='fiveDay' id='day-"+counter+"'>Date: <span>" + date + "</span> </div>");
           $(".each-day").append("<div class='fiveDay' id='day-"+counter+"'>Condition: <span>" + description + "</span></div>");
-          $(".each-day").append("<div class='fiveDay' id='temp-"+counter+"'>High: <span>" + hiTemp + "</span> Low: <span>" + lowTemp + "</span></div>");
+          $(".each-day").append("<div class='fiveDay' id='temp-"+counter+"'>High: <span>" + hiTemp + "°" + "</span> Low: <span>" + lowTemp + "°" + "</span></div>");
           $(".each-day").append("<div class='fiveDay' id=humidity-"+counter+"'>Humidity: <span>" + humidity + "% </span></div><br>");
 
 
